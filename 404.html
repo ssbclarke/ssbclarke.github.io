@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="materialize.min.css">
+		<style>
+		.randMsg { display: none; }
+		</style>
+	</head>
+
+
+	<body>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="materialize.min.js"></script>
+		<!--NavBar-->
+			<nav class="grey darken-3">
+			    <div class="container nav-wrapper">
+			      <a href="index.html" class="brand-logo">SSBClarke.net</a>
+			      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			      <ul class="right hide-on-med-and-down">
+			        <li class="active"><a class="waves-effect waves-light" href="index.html">Home</a></li>
+			        <li><a class="waves-effect waves-light" href="aboutme.html">About</a></li>
+			        <li><a class="waves-effect waves-light" href="contact.html">Contact</a></li>
+			      </ul>
+			      <ul class="side-nav" id="mobile-demo">
+			        <li class="active"><a class="waves-effect waves-dark" href="index.html">Home</a></li>
+			        <li><a class="waves-effect waves-dark" href="aboutme.html">About</a></li>
+			        <li><a class="waves-effect waves-dark" href="contact.html">Contact</a></li>
+			      </ul>
+			    </div>
+			</nav>
+
+
+
+			<div class = "container">
+				<h3 class = "center">Page Not Found</h3>
+			</div>
+
+			<div class = "container">
+				<h5 id = "msg" class = "center">
+					<div class="randMsg">
+						Maybe you entered the wrong URL?
+					</div>
+					<div class="randMsg">
+						Maybe not?
+					</div>
+				</h5>
+			</div>
+
+
+
+	</body>
+	<script>
+	$(document).ready(function() {
+		var randMsgs = $('.randMsg');
+		randMsgs[rand() % (randMsgs.length - 1)].show();
+	});
+	</script>
+
+</html>
